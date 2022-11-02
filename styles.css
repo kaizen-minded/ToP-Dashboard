@@ -1,0 +1,72 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 93%);
+  --clr-primary: hsl(198, 100%, 41%);
+}
+
+/* Generals */
+body {
+  --gap: 0;
+  background-color: var(--clr-grey);
+  font-family: Roboto, san-serif;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: minmax(max-content, 15vw) 1fr;
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > * + * {
+  /* border: 1px solid red; */
+  margin-block-start: var(--flow-space, 1rem);
+}
+
+.primary-aside {
+  --flow-space: 2.75rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding-inline: 1.5rem;
+  padding-inline-end: 4rem;
+  padding-block: 1rem;
+}
+
+.primary-header {
+  align-items: center;
+}
+.primary-header > i {
+  font-size: 2rem;
+  margin-inline-end: 1rem;
+}
+.primary-header__title {
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.navbar__menu {
+  --flow-space: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__item {
+  font-size: 1.2rem;
+}
+.navbar__item > i {
+  margin-inline-end: 1rem;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
