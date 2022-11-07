@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;1,8..144,700&family=Roboto:wght@400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;1,8..144,700&family=Roboto:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="reset.css" />
@@ -22,7 +22,7 @@
     <title>DashBoard</title>
   </head>
   <body class="container grid">
-    <aside class="primary-aside flow">
+    <header class="primary-aside flow">
       <header class="primary-header flex">
         <i class="fa-solid fa-city"></i>
         <h1 class="primary-header__title">Dashboard</h1>
@@ -71,14 +71,90 @@
           </li>
         </ul>
       </nav>
-    </aside>
-    <main>
-      <header></header>
-      <section class="projects"></section>
-      <aside>
-        <div class="announcements"></div>
-        <div class="trending"></div>
-      </aside>
+    </header>
+    <section class="dashboard__header">
+      <section class="dashboard__header--top flex">
+        <div class="dashboard__search flex">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="dashboard__input" type="text" />
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-comment"></i>
+          <div class="profile__img profile__img--small"></div>
+          <p>Morgan Oakley</p>
+        </div>
+      </section>
+      <section class="dashboard__header--bottom flex">
+        <div class="user flex">
+          <div class="profile__img profile__img--large"></div>
+          <div>
+            <p class="user__greeting">Hi there,</p>
+            <p class="user__name">Morgan Oakley (@morgan)</p>
+          </div>
+        </div>
+        <menu>
+          <button class="btn">New</button>
+          <button class="btn">Upload</button>
+          <button class="btn">Share</button>
+        </menu>
+      </section>
+    </section>
+    <main class="dashboard grid">
+      <section class="dashboard__projects">
+        <h2>Your Projects</h2>
+      </section>
+      <section class="main__announcements">
+        <h2 class="announcements__title">Announcement</h2>
+        <ul class="announcements__list flow">
+          <li class="announcements__item">
+            <h3>Site Maintenance</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              quod dolores dolorum quam.
+            </p>
+          </li>
+          <li class="announcements__item">
+            <h3>Community Share Day</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              nobis debitis qui.
+            </p>
+          </li>
+          <li class="announcements__item">
+            <h3>Updated Privacy Policy</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non,
+              vero! Inventore, quidem?
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main__trending">
+        <h2 class="main__title">Trending</h2>
+        <ul class="announcements__list flow">
+          <li class="announcements__item flex">
+            <div class="profile__img profile__img--small"></div>
+            <hgroup>
+              <h4>@tegan</h4>
+              <p>World Peace Builder</p>
+            </hgroup>
+          </li>
+          <li class="announcements__item flex">
+            <div class="profile__img profile__img--small"></div>
+            <hgroup>
+              <h4>@tegan</h4>
+              <p>World Peace Builder</p>
+            </hgroup>
+          </li>
+          <li class="announcements__item flex">
+            <div class="profile__img profile__img--small"></div>
+            <hgroup>
+              <h4>@tegan</h4>
+              <p>World Peace Builder</p>
+            </hgroup>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
